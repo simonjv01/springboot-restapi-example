@@ -2,6 +2,7 @@ package com.example.springboot.controller;
 
 import com.example.springboot.bean.Student;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -30,7 +31,11 @@ public class StudentController {
     }
 
     // Spring BOOT REST API with Path Variable
-    public Student studentPathVariable() {
-        
+    // {id} - URI template variable
+    // http://localhost:8080/students/1
+    @GetMapping("students/{id}")
+    public Student studentPathVariable(@PathVariable("id") int studentId) {
+        return new Student(id, "Simon", "Vargas");
+
     }
 }
