@@ -28,4 +28,9 @@ public class StudentController {
         return students;
 
     }
+
+    // Spring BOOT REST API with Path Variable
+    public Student studentPathVariable() {
+        
+    }
 }
