@@ -35,7 +35,7 @@ public class StudentController {
     // http://localhost:8080/students/1
     @GetMapping("students/{id}")
     public Student studentPathVariable(@PathVariable("id") int studentId) {
-        return new Student(id, "Simon", "Vargas");
+        return new Student(studentId, "Simon", "Vargas");
 
     }
 }
