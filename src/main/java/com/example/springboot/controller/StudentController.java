@@ -52,7 +52,13 @@ public class StudentController {
     @GetMapping("students/query")
     public Student studentRequestVariable(@RequestParam int id,
                                           @RequestParam String firstName,
-                                          @RequestParam String lastName) {
-        return new Student(id, firstName, lastName);
+                                          @RequestParam String lastName, @RequestParam(required = false) String email,
+                                          @RequestParam(required = false) String phone,
+                                          @RequestParam(required = false) String address,
+                                          @RequestParam(required = false) String city,
+                                          @RequestParam(required = false) String state,
+                                          @RequestParam(required = false) String zip,
+                                          @RequestParam(required = false) String country) {
+        return new Student(id, firstName, lastName, email, phone, address, city, state, zip, country);
     }
 }
