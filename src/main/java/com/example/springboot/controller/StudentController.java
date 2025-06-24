@@ -14,7 +14,8 @@ public class StudentController {
 
     @GetMapping("student")
     public Student getStudent() {
-        Student student = new Student(1, "Simon", "Vargas"
+        Student student = new Student(1, "Simon", "Vargas", "sbc@gmail.com", "1234567",
+                "123 Main St", "Springfield", "IL", "62704", "USA"
         );
         return student;
     }
@@ -22,10 +23,14 @@ public class StudentController {
     @GetMapping("students")
     public List<Student> getStudents() {
         List<Student> students = new ArrayList<>();
-        students.add(new Student(1, "Simon", "Vargas"));
-        students.add(new Student(2, "John", "Doe"));
-        students.add(new Student(3, "Jane", "Smith"));
-        students.add(new Student(4, "Mr", "Robot")
+        students.add(new Student(1, "Simon", "Vargas","sjv@gmail.com","1234565",
+                "123 Main St", "Springfield", "IL", "62704", "USA"));
+        students.add(new Student(2, "John", "Doe","jdoe@gmail.com","9876543",
+                "456 Elm St", "Springfield", "IL", "62704", "USA"));
+        students.add(new Student(3, "Jane", "Smith","jsmith@yahoo.com","4567890",
+                "789 Oak St", "Springfield", "IL", "62704", "USA"));
+        students.add(new Student(4, "Mr", "Robot","mrobot@gmail.com", "1122334",
+                "101 Pine St", "Springfield", "IL", "62704", "USA")
         );
         return students;
 
