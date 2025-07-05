@@ -3,6 +3,8 @@ package com.example.springboot.controller;
 import com.example.springboot.bean.Student;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -60,5 +62,17 @@ public class StudentController {
                                           @RequestParam(required = false) String zip,
                                           @RequestParam(required = false) String country) {
         return new Student(id, firstName, lastName, email, phone, address, city, state, zip, country);
+    }
+
+    // Spring Boot REST API that handles HTTP POST requests
+        // @PostMapping("/students")
+    @PostMapping("/students/create")
+    public Student createStudent(@RequestBody Student student) {
+        // Here you would typically save the student to a database
+        // For this example, we will just return the student object
+        System.out.println(student.getId());
+        System.out.println(student.getFirstName());
+        System.out.println(student.getLastName());
+        return student;
     }
 }
