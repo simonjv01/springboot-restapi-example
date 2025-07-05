@@ -43,7 +43,7 @@ public class StudentController {
     public Student studentPathVariable(@PathVariable("id") int studentId,
                                        @PathVariable("first-name") String firstName,
                                        @PathVariable("last-name") String lastName) {
-        return new Student(studentId, firstName, lastName);
+        return new Student(studentId, firstName, lastName, null, null, null, null, null, null, null);
 
     }
 

@@ -14,9 +14,8 @@ public class Student {
  
     public Student() {
     }
-    public Student(int id, String firstName, String lastName,
-                   String email, String phone, String address,
-                   String city, String state, String zip, String country) {
+    public Student(int id, String firstName, String lastName, String email, String phone,
+                   String address, String city, String state, String zip, String country) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
