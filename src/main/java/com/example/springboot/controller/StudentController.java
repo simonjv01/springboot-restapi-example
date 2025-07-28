@@ -86,6 +86,7 @@ public class StudentController {
             System.out.println(student.getId());
             System.out.println(student.getFirstName());
             System.out.println(student.getLastName());
+            System.out.println(student.getEmail());
             return student;
         }
 }
