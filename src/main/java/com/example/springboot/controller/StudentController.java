@@ -83,8 +83,6 @@ public class StudentController {
         public Student updateStudent(@RequestBody Student student, @PathVariable("id")int StudentId) {
 
             // Here you would typically update the student in a database
-            System.out.println(student.getId());
-            System.out.println(student.getFirstName());
             System.out.println(student.getLastName());
             System.out.println(student.getEmail());
             return student;
