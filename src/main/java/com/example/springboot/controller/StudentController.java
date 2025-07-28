@@ -4,6 +4,7 @@ import com.example.springboot.bean.Student;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -77,5 +78,14 @@ public class StudentController {
         System.out.println(student.getFirstName());
         System.out.println(student.getLastName());
         return student;
-    }
+}
+        @PutMapping("/students/{id}/update")
+        public Student updateStudent(@RequestBody Student student, @PathVariable("id")int StudentId) {
+
+            // Here you would typically update the student in a database
+            System.out.println(student.getId());
+            System.out.println(student.getFirstName());
+            System.out.println(student.getLastName());
+            return student;
+        }
 }
