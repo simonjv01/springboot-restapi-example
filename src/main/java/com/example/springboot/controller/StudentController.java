@@ -1,6 +1,8 @@
 package com.example.springboot.controller;
 
 import com.example.springboot.bean.Student;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -77,9 +79,11 @@ public class StudentController {
         System.out.println(student.getId());
         System.out.println(student.getFirstName());
         System.out.println(student.getLastName());
-        return student;
-}
-        @PutMapping("/students/{id}/update")
+        return student; 
+        }
+
+
+     @PutMapping("/students/{id}/update")
         public Student updateStudent(@RequestBody Student student, @PathVariable("id")int StudentId) {
 
             // Here you would typically update the student in a database
@@ -87,4 +91,12 @@ public class StudentController {
             System.out.println(student.getEmail());
             return student;
         }
+
+        @DeleteMapping("/students/{id}/delete")
+        public String deleteStudent(int studentId) {
+            // Here you would typically delete the student from a database
+            return "Student with ID " + studentId + " deleted successfully.";
+        }
+
+
 }
