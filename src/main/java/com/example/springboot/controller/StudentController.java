@@ -79,20 +79,11 @@ public class StudentController {
         System.out.println(student.getId());
         System.out.println(student.getFirstName());
         System.out.println(student.getLastName());
-<<<<<<< HEAD
         return student; 
         }
 
 
      @PutMapping("/students/{id}/update")
-=======
-        return student;
-
-        // Spring Boot REST API that handles HTTP PUT requests
-        // @PutMapping("/students/{id}/update")
-}
-        @PutMapping("/students/{id}/update")
->>>>>>> c20e480b0ae807c36981ed0813931d5b5ebef8ed
         public Student updateStudent(@RequestBody Student student, @PathVariable("id")int StudentId) {
 
             // Here you would typically update the student in a database
@@ -102,7 +93,7 @@ public class StudentController {
         }
 
         @DeleteMapping("/students/{id}/delete")
-        public String deleteStudent(int studentId) {
+        public String deleteStudent(@PathVariable("id") int studentId) {
             // Here you would typically delete the student from a database
             return "Student with ID " + studentId + " deleted successfully.";
         }
